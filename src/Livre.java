@@ -1,9 +1,10 @@
-public abstract class Livre {
+public class Livre {
     protected String titre;
     protected String auteur;
     protected String anneePublication;
     protected String categorie;
     protected boolean disponibilite;
+
 
     public Livre(String titre, String auteur, String anneePublication, String categorie, boolean disponibilite) {
         this.titre = titre;
@@ -12,6 +13,7 @@ public abstract class Livre {
         this.categorie = categorie;
         this.disponibilite = disponibilite;
     }
+
 
     public boolean estEmpreinter() {
         return !disponibilite;
@@ -30,4 +32,8 @@ public abstract class Livre {
     public String getAuteur() { return auteur; }
     public String getAnneePublication() { return anneePublication; }
     public String getCategorie() { return categorie; }
+
+    public String getAnnee() {
+        return anneePublication;
+    }
 }

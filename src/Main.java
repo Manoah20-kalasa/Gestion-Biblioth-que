@@ -9,7 +9,8 @@ public class Main {
         Administrateur admin = new Administrateur("Admin", "Bibliothèque Centrale", 40);
         admin.ajouterLivre(new Roman("Naruto", "Masashi Kishimoto", "1998", "Manga", true, "Shonen"));
         admin.ajouterLivre(new Roman("DBZ", "Akira Toriyama", "1984", "Manga", true, "Action"));
-
+        LivreDAO dao=new LivreDAO();
+        dao.ajouterLivre(new Roman("Nanatsu no taizen","suzuki","2010","Manga",true,"shonen"));
         System.out.print("Entrez votre nom : ");
         String nom = scanner.nextLine();
         Lecteur lecteur = new Lecteur(nom, "adresse inconnue", 20);
